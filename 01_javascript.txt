@@ -1,0 +1,39 @@
+<!-- There are 2 types of DataTypes.
+
+1. Primitive
+2. Non-primitive
+
+we can classify primitive data type in 7 categories.
+Note :- primitive Datatype stored by value.
+let a = "Saksham";
+let b = a;
+
+b = "Shrivastava";
+
+console.log(a); // 👉 "Saksham"
+console.log(b); // 👉 "Shrivastava"
+1. number 2. string 3. boolean 4. undefined 5. null 6. bigint 7. symbol 
+
+1.number -> 1, 4.2
+2.string -> 'hello' or "hello" ,it must be under the '' or " " or `` and also `${}` it shows the value or variable in the string. 
+========================================================================
+string to no ->1. "1000" => +"1000" -> datatype is now -> number. 
+               2. "Anurag"=> +"Anurag" -> datatype is now -> NaN. {it is a number but, not a valid number}
+               3. "100fdfads" => parseInt('100fdfads')=> 100 or if "fdsfa100Fdfs" => parseInt("fdsfa100Fdfs") => Nan , cause 100 is in between the string.
+number to string -> 100 +" " =>"100"
+========================================================================
+
+3.boolean -> true or false 
+        => +false => 0 , +true =>1
+
+4.undefined -> A variable has been declared but has not yet been assigned a value.   
+5.null -> This means the variable user is empty on purpose. 
+         typeof(null)=> object
+
+========================================================================
+some odd cases -> +null =>0 ,+undefined => NaN ,parseInt(undefined)=> Nan
+
+
+
+
+with the help of typeof operator we can check what data type it is . -->
