@@ -69,17 +69,80 @@
 // console.log(replcedMessage1);
 // Hi, I am Saksham
 
-// const finalMessage = "hi, i am Saksham";
-// const replacedMessage = finalMessage.replace("a","A");
-// console.log(replacedMessage);
+const finalMessage = "hi, i am Saksham";
+const replacedMessage = finalMessage.replace("a","A");
+console.log(replacedMessage);
 //  ->hi, i Am Saksham
 // -> but it only changes first a only to replaced all the a's we need to use replaceAll() method
 
 // 4. replaceAll
 // it replace all the founding element in the String.
-// const finalMessage = "hi, i am Saksham";
-// const replacedMessage = finalMessage.replaceAll("a","A");
-// console.log(replacedMessage);
+const finalMessage1 = "hi, i am Saksham";
+const replacedMessage1 = finalMessage1.replaceAll("a","A");
+console.log(replacedMessage1);
 // hi, i Am SAkshAm
+ 
+// 5. concat -> method for string or array can take any number of arguments in it .
+let message = "Hello World";
+let finalMessage2 = "I am Saksham";
 
-5.
+console.log(message.concat(finalMessage2));
+// hi, i Am SAkshAm
+console.log(message.concat("    ",finalMessage1));
+// Hello World    I am Saksham
+let faltuMessage = "fdsafds";
+console.log(message.concat(faltuMessage,finalMessage1));
+// Hello WorldfdsafdsI am Saksham
+
+
+// 6.padStart ->The padStart() method is used with strings to pad the beginning 
+// of a string with another string until it reaches a desired length.
+
+
+//1. Eg: basic Padding with space :
+let str = "34";
+console.log(str.padStart(5)); 
+// ->"  34"
+// 2. padding with custom characters:
+let str1 = "43";
+console.log(str.padStart(6,"0")); 
+// -> 000034
+// 3. with the star *
+let lastFourDigits= 4343;
+console.log(str.padStart(14,"*"));
+// ->************34
+// if length is shorter .
+let str3 = "12345";
+console.log(str3.padStart(3,"*"));
+//-> No change(no change, since it's already > 4)
+
+
+// 6.padEnd() (Same as padStart)
+
+// 7.charAt()
+let myName = "my name is saksham";
+console.log(myName[4]);
+//-> a
+ console.log(myName.charAt(3));
+//-> n
+
+// 8.charCodeAt() it provides the ascii code
+console.log(myName.charCodeAt(11));
+
+// 9. split() -> it split the string in the array
+
+console.log(myName.split(" "));
+//(4) ['my', 'name', 'is', 'saksham']
+console.log(myName.split("a"));
+// (4) ['my n', 'me is s', 'ksh', 'm']
+
+
+// =========================================================================
+// Template literal 
+let lastthreeDigits = 434;
+let templateString = `last four digit of my account is `;
+console.log(templateString +`${lastthreeDigits}`);
+// or with concat() method 
+let templateString1 = `last four digit of my account is `
+ let withconcat = templateString1.concat(lastthreeDigits);
+ console.log(withconcat);
