@@ -34,10 +34,10 @@
 //    console.log(window.c); // ❌ undefined
 
 // console.log(firstname);
-debugger
-var firstName = "saksham";
-let secondName = "shrivastava"
-const age = 43;
+// debugger
+// var firstName = "saksham";
+// let secondName = "shrivastava"
+// const age = 43;
 
 
 

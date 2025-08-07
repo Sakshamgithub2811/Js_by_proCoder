@@ -19,7 +19,8 @@
 // ========================================================================
 // string to no ->1. "1000" => +"1000" -> datatype is now -> number. 
 //                2. "Anurag"=> +"Anurag" -> datatype is now -> NaN. {it is a number but, not a valid number}
-//                3. "100fdfads" => parseInt('100fdfads')=> 100 or if "fdsfa100Fdfs" => parseInt("fdsfa100Fdfs") => Nan , cause 100 is in between the string.
+//                3. "100fdfads" => parseInt('100fdfads')=> 100 or if "fdsfa100Fdfs" => parseInt("fdsfa100Fdfs") => Nan , 
+// cause 100 is in between the string.
 // number to string -> 100 +" " =>"100"
 // ========================================================================
 

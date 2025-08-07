@@ -16,7 +16,7 @@
 // // it also give two options Ok and Cancel.
 // //  and it gives result which is stored and null on canceling button
 
-let promptValue = prompt("What is your name?");
+// let promptValue = prompt("What is your name?");
 
-alert("Your name is "+ promptValue);
+// alert("Your name is "+ promptValue);
 
