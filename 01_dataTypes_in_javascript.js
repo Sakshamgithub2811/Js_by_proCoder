@@ -1,40 +1,69 @@
-// <!-- There are 2 types of DataTypes.
+// -> There are 2 types of Data Types in JavaScript:
 
-// 1. Primitive (Immutable->These cannot be changed — if you "modify" them, a new value is created instead.)
-// 2. Non-primitive (Mutable ->These can be modified directly without creating a new reference.)
+// 1. Primitive (Immutable -> These cannot be changed. If you "modify" them, a new value is created.)
+// 2. Non-Primitive (Mutable -> These can be modified directly without creating a new reference.)
 
-// we can classify primitive data type in 7 categories.
-// Note :- primitive Datatype stored by value.
-// let a = "Saksham";
-// let b = a;
+// Note: Primitive data types are stored by **value**.
 
-// b = "Shrivastava";
+// Example: stored by value
+let a = "Saksham";
+let b = a;
 
-// console.log(a); // 👉 "Saksham"
-// console.log(b); // 👉 "Shrivastava"
-// 1. number 2. string 3. boolean 4. undefined 5. null 6. bigint 7. symbol 
+b = "Shrivastava";
 
-// 1.number -> 1, 4.2
-// 2.string -> 'hello' or "hello" ,it must be under the '' or " " or `` and also `${}` it shows the value or variable in the string. 
-// ========================================================================
-// string to no ->1. "1000" => +"1000" -> datatype is now -> number. 
-//                2. "Anurag"=> +"Anurag" -> datatype is now -> NaN. {it is a number but, not a valid number}
-//                3. "100fdfads" => parseInt('100fdfads')=> 100 or if "fdsfa100Fdfs" => parseInt("fdsfa100Fdfs") => Nan , 
-// cause 100 is in between the string.
-// number to string -> 100 +" " =>"100"
-// ========================================================================
+console.log(a); // 👉 "Saksham"
+console.log(b); // 👉 "Shrivastava"
 
-// 3.boolean -> true or false 
-//         => +false => 0 , +true =>1
+// ==============================================================================
+// Primitive data types (7 types):
 
-// 4.undefined -> A variable has been declared but has not yet been assigned a value.   
-// 5.null -> This means the variable user is empty on purpose. 
-//          typeof(null)=> object
+// 1. Number        -> e.g., 1, 4.2
+// 2. String        -> e.g., 'hello', "hello", `hello`
+//                    Template literals: `${variable}` can be used inside backticks
+// 3. Boolean       -> true or false
+// 4. Undefined     -> A variable that is declared but not assigned
+// 5. Null          -> Assigned intentionally to represent "no value"
+// 6. BigInt        -> For large integers beyond safe integer range
+// 7. Symbol        -> Unique and immutable values often used as object keys
 
-// ========================================================================
-// some odd cases -> +null =>0 ,+undefined => NaN ,parseInt(undefined)=> Nan
+// ==============================================================================
+// Type conversion examples:
 
+// String to Number
+console.log(+"1000");           // -> 1000 (string to number)
+console.log(+"Anurag");         // -> NaN (not a valid number)
+console.log(parseInt("100abc")); // -> 100
+console.log(parseInt("abc100")); // -> NaN (100 not at start)
 
+// Number to String
+console.log(100 + "");          // -> "100" (number to string)
 
+// ==============================================================================
+// Boolean conversion
+console.log(+false); // -> 0
+console.log(+true);  // -> 1
 
-// with the help of typeof operator we can check what data type it is . -->
+// ==============================================================================
+// Undefined vs Null
+
+let x;
+console.log(x);         // -> undefined
+let y = null;
+console.log(y);         // -> null
+console.log(typeof y);  // -> "object" (quirk in JavaScript)
+
+// Odd cases:
+console.log(+null);             // -> 0
+console.log(+undefined);        // -> NaN
+console.log(parseInt(undefined)); // -> NaN
+
+// ==============================================================================
+// typeof operator is used to check the data type
+
+console.log(typeof "Hello");       // -> string
+console.log(typeof 42);            // -> number
+console.log(typeof true);          // -> boolean
+console.log(typeof undefined);     // -> undefined
+console.log(typeof null);          // -> object (special case)
+console.log(typeof BigInt(1234));  // -> bigint
+console.log(typeof Symbol("id"));  // -> symbol
