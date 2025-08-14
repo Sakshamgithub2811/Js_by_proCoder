@@ -18,7 +18,7 @@
 // 3. Arrays
 
 // Example objects:
-const User = {}; // empty object
+const User = {}; // Empty object
 
 const User1 = {
   firstName: "Saksham",
@@ -90,3 +90,25 @@ user4.age = 45;
 user4["is-student"] = "Rakesh";
 
 console.log(user4);
+
+// Nested object example:
+const user5 = {
+  firstName: "Adarsh",
+  lastName: "Singh",
+  address: {
+    city: "Bangalore",
+    pinCode: 876876,
+    state: "Karnataka",
+    moreDetails: {
+      population: 87898989,
+      area: "878 sq km"
+    }
+  }
+};
+
+// Accessing nested properties:
+console.log(user5.address.city); // Bangalore
+console.log(user5.address.pinCode); // 876876
+
+// Final note:
+// JavaScript compares the addresses (references) of objects, not their values.
