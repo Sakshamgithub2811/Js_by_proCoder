@@ -8,7 +8,7 @@
 
     // 👉 In browsers, the global scope is connected to the global object (window).
 
-    Example:
+    // Example:
     var a = 10;   // var → attaches to window
     let b = 20;   // let → stays in script scope
     const c = 30; // const → stays in script scope
@@ -36,7 +36,7 @@
 
     // Variables here do not attach to the global object (window).
 
-    Example:
+    // Example:
     let x = 50;
     const y = 100;
 
